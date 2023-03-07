@@ -1,34 +1,29 @@
-package com.microservices.combioservice.model;
+package com.microservices.bookservice.response;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-@Entity
-@Table(name = "cambio")
 public class Cambio implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long id;
 
-	@Column(name = "from_currency", nullable = false, length = 3)
 	private String from;
-	@Column(name = "to_currency", nullable = false, length = 3)
+	
 	private String to;
-	@Column(nullable = false)
-	private BigDecimal conversionFactor;
-	@Transient
-	private BigDecimal convertedValue;
-	@Transient
+	
+	private Double conversionFactor;
+	
+	private Double convertedValue;
+	
 	private String enviromment;
 	
 	public Cambio () {
 		
 	}
 
-	public Cambio(Long id, String from, String to, BigDecimal conversionFactor, BigDecimal convertedValue,
+	public Cambio(Long id, String from, String to, Double conversionFactor, Double convertedValue,
 			String enviromment) {
 		super();
 		this.id = id;
@@ -38,7 +33,6 @@ public class Cambio implements Serializable{
 		this.convertedValue = convertedValue;
 		this.enviromment = enviromment;
 	}
-
 
 	public Long getId() {
 		return id;
@@ -70,22 +64,22 @@ public class Cambio implements Serializable{
 	}
 
 
-	public BigDecimal getConversionFactor() {
+	public Double getConversionFactor() {
 		return conversionFactor;
 	}
 
 
-	public void setConversionFactor(BigDecimal conversionFactor) {
+	public void setConversionFactor(Double conversionFactor) {
 		this.conversionFactor = conversionFactor;
 	}
 
 
-	public BigDecimal getConvertedValue() {
+	public Double getConvertedValue() {
 		return convertedValue;
 	}
 
 
-	public void setConvertedValue(BigDecimal convertedValue) {
+	public void setConvertedValue(Double convertedValue) {
 		this.convertedValue = convertedValue;
 	}
 
@@ -94,11 +88,9 @@ public class Cambio implements Serializable{
 		return enviromment;
 	}
 
-
 	public void setEnviromment(String enviromment) {
 		this.enviromment = enviromment;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -107,7 +99,6 @@ public class Cambio implements Serializable{
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
