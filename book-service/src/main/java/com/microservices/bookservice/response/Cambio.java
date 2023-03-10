@@ -1,7 +1,6 @@
 package com.microservices.bookservice.response;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 public class Cambio implements Serializable{
 	
