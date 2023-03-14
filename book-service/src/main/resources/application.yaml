@@ -45,6 +45,9 @@ spring:
     user: root
     password: root
     baseline-on-migrate: true
+springdoc:
+  api-docs:
+    path: /book-service/v3/api-docs
 
 
 
