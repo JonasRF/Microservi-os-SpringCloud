@@ -19,7 +19,7 @@
 
 -> Distributed Tracing com Docker, Zipkin, Eureka e Sleuth
 
-## Mas se manter atualizado quando se trata de microsserviços é um grande desafio. Em 2018, 
+Mas se manter atualizado quando se trata de microsserviços é um grande desafio. Em 2018, 
 a Netflix anunciou que vários projetos centrais do Spring Cloud estavam entrando em modo de manutenção. 
 O que significa que nenhuma nova funcionalidade seria feita nesses projetos, ou seja, foram depreciados. 
 Por isso, em dezembro de 2018, a equipe da Spring Cloud recomendou várias substituições importantes:
@@ -33,5 +33,10 @@ Ribbon  -->  Spring Cloud Load Balancer
 Zuul 1  -->  Spring Cloud Gateway
 
 Archaius 1  -->  Spring Cloud Config
+
+
+Arquitetura do projeto:
+
+![image](https://user-images.githubusercontent.com/77034798/228354388-5ac85426-bafa-400d-98d5-946c8e7b68c0.png)
 
 
