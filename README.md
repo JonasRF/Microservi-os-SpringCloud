@@ -31,7 +31,7 @@
 
 - Archaius 1  -->  Spring Cloud Config
 
-Foi feito o uso também de mensageria com RabbitMQ; caso o servidor de ratreamento venha a falhar ocorrerá a perda de informações dos logs ocorridos em
+Foi feito o uso também de mensageria com RabbitMQ; caso o servidor de rastreamento venha a falhar ocorrerá a perda de informações dos logs ocorridos em
 cada microserviço. Para evitar isso é utilizado o recurso de mensageria que guarda(em memória) essas informações de logs em uma fila, apenas aguardando o serviço de tracing server voltar e com isso retornar as informações.
 
 
